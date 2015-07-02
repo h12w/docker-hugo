@@ -8,4 +8,6 @@ ADD https://github.com/spf13/hugo/releases/download/v$HUGO_VER/$HUGO_DEB .
 RUN dpkg --install $HUGO_DEB
 RUN rm $HUGO_DEB
 
+WORKDIR /work
+
 ENTRYPOINT [ "hugo" ]
